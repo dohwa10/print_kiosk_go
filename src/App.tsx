@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Printer, Wifi, Bluetooth, Usb, File, Coins, CheckCircle, ArrowLeft, Upload } from 'lucide-react';
+import { useState } from 'react';
+import { Printer, Wifi, Bluetooth, Usb, File, Coins, CheckCircle, ArrowLeft } from 'lucide-react';
 
 export default function PrintKioskUI() {
   const [step, setStep] = useState<string>('start'); // start, connection, upload, layout, summary, payment, complete
