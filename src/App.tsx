@@ -195,9 +195,9 @@ export default function PrintKioskUI() {
 
   const renderUpload = () => {
     const connectionInfo: any = {
-      cloud: { icon: Wifi, color: 'blue', text: 'Cloud Storage' },
-      bluetooth: { icon: Bluetooth, color: 'purple', text: 'Bluetooth Connection' },
-      usb: { icon: Usb, color: 'green', text: 'USB Drive' }
+      cloud: { icon: Wifi, color: 'blue', text: 'Cloud Storage', bgClass: 'bg-blue-100', textClass: 'text-blue-600' },
+      bluetooth: { icon: Bluetooth, color: 'purple', text: 'Bluetooth Connection', bgClass: 'bg-purple-100', textClass: 'text-purple-600' },
+      usb: { icon: Usb, color: 'green', text: 'USB Drive', bgClass: 'bg-green-100', textClass: 'text-green-600' }
     };
     const info = connectionInfo[connectionType as string];
     const Icon = info.icon;
@@ -215,8 +215,8 @@ export default function PrintKioskUI() {
 
         <div className="flex flex-col flex-1">
           <div className="flex items-center mb-3 md:mb-4">
-            <div className={`bg-${info.color}-100 p-2 md:p-3 rounded-lg mr-3`}>
-              <Icon className={`w-6 h-6 md:w-7 md:h-7 text-${info.color}-600`} />
+            <div className={`${info.bgClass} p-2 md:p-3 rounded-lg mr-3`}>
+              <Icon className={`w-6 h-6 md:w-7 md:h-7 ${info.textClass}`} />
             </div>
             <h2 className="text-lg md:text-xl font-bold text-gray-800">{info.text}</h2>
           </div>
