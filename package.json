@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --mode production",
+    "build": "node node_modules/vite/bin/vite.js build --mode production",
     "preview": "vite preview",
     "deploy": "npm run build && git add dist -f && git commit -m 'Deploy to GitHub Pages' && git push origin HEAD:gh-pages"
   },
