@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Print Kiosk Go</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="module" crossorigin src="/assets/index-DWT3Dt4o.js"></script>
+    <script type="module" crossorigin src="/assets/index-DnmSZbC5.js"></script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
+    <script>
+      window.addEventListener('error', (e) => {
+        console.error('Error:', e.error);
+        document.body.innerHTML += '<p style="color:red;padding:20px;">Error: ' + e.error + '</p>';
+      });
+    </script>
   </body>
 </html>
